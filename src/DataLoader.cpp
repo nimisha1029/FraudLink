@@ -5,7 +5,7 @@
 
 using namespace std;
 
-vector<Account> loadAccounts(string filename) {
+vector<Account> DataLoader::loadAccounts(string filename) {
     vector<Account> accounts;
 
     ifstream file(filename);

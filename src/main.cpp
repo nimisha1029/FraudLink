@@ -1,22 +1,28 @@
 #include <iostream>
 #include <vector>
-#include "Account.h"
 #include "DataLoader.h"
+#include "TransactionLoader.h"
+#include "DeviceLoader.h"
 
 using namespace std;
 
 int main() {
-    vector<Account> accounts = loadAccounts("data/accounts.csv");
+    DataLoader accountLoader;
+    TransactionLoader transactionLoader;
+    DeviceLoader deviceLoader;
 
-    cout << "FraudLink - Account Records" << endl;
+    vector<Account> accounts =
+        accountLoader.loadAccounts("data/accounts.csv");
 
-    for (int i = 0; i < accounts.size(); i++) {
-        cout << "ID: " << accounts[i].id << endl;
-        cout << "Name: " << accounts[i].name << endl;
-        cout << "Balance: " << accounts[i].balance << endl;
-    }
+    vector<Transaction> transactions =
+        transactionLoader.loadTransactions("data/transactions.csv");
 
-    cout << "Total accounts loaded: " << accounts.size() << endl;
+    vector<Device> devices =
+        deviceLoader.loadDevices("data/devices.csv");
+
+    cout << "Accounts loaded: " << accounts.size() << endl;
+    cout << "Transactions loaded: " << transactions.size() << endl;
+    cout << "Devices loaded: " << devices.size() << endl;
 
     return 0;
 }

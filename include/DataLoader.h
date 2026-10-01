@@ -5,8 +5,9 @@
 #include <string>
 #include "Account.h"
 
-using namespace std;
-
-vector<Account> loadAccounts(string filename);
+class DataLoader {
+public:
+    vector<Account> loadAccounts(string filename);
+};
 
 #endif

@@ -1,5 +1,4 @@
-device_id,account_id
-D001,A001
-D001,A002
-D002,A003
-D003,A004
+id,type
+D001,mobile
+D002,laptop
+D003,tablet
