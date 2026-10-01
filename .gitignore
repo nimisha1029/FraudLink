@@ -1,0 +1,25 @@
+# Compiled C++ files
+*.o
+*.out
+*.exe
+*.app
+
+# Build directories
+build/
+cmake-build-*/
+
+# macOS
+.DS_Store
+
+# VS Code workspace settings
+.vscode/
+
+# Temporary and log files
+*.log
+*.tmp
+
+# IDE files
+.idea/
+
+# Generated large datasets
+data/generated/
