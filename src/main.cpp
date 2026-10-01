@@ -6,6 +6,7 @@
 #include "DeviceLoader.h"
 #include "AccountSearch.h"
 #include "AccountIndex.h"
+#include "Graph.h"
 
 using namespace std;
 
@@ -52,5 +53,22 @@ int main() {
         } else {
             cout << "Hash search: Account not found" << endl;
         }
+    Graph graph;
+
+    // Build the graph
+    graph.buildGraph(accounts, transactions);
+
+    // Display graph with transaction details
+    cout << "\nTransaction Graph:\n";
+    graph.displayGraph();
+
+    // Perform BFS
+    cout << "\n";
+    graph.BFS("A001");
+
+    // Perform DFS
+    cout << "\n";
+    graph.DFS("A001");
+
     return 0;
 }
