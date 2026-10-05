@@ -8,6 +8,7 @@ class Device {
 public:
     string id;
     string type;
+    string accountId;
 };
 
 #endif

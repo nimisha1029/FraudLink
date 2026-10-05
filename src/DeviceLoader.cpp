@@ -23,6 +23,7 @@ vector<Device> DeviceLoader::loadDevices(string filename) {
 
         getline(ss, d.id, ',');
         getline(ss, d.type, ',');
+        getline(ss, d.accountId, ',');
 
         devices.push_back(d);
     }

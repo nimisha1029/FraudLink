@@ -7,13 +7,14 @@
 #include "AccountSearch.h"
 #include "AccountIndex.h"
 #include "Graph.h"
+#include "Analyzer.h"
 
 using namespace std;
 
 int main() {
     DataLoader accountLoader;
     TransactionLoader transactionLoader;
-    DeviceLoader deviceLoader;
+    // DeviceLoader deviceLoader;
 
     vector<Account> accounts =
         accountLoader.loadAccounts("data/accounts.csv");
@@ -21,12 +22,12 @@ int main() {
     vector<Transaction> transactions =
         transactionLoader.loadTransactions("data/transactions.csv");
 
-    vector<Device> devices =
-        deviceLoader.loadDevices("data/devices.csv");
+    // vector<Device> devices =
+    //     deviceLoader.loadDevices("data/devices.csv");
 
     cout << "Accounts loaded: " << accounts.size() << endl;
     cout << "Transactions loaded: " << transactions.size() << endl;
-    cout << "Devices loaded: " << devices.size() << endl;
+    // cout << "Devices loaded: " << devices.size() << endl;
 
     AccountSearch searcher;
     AccountIndex indexer;
@@ -69,6 +70,24 @@ int main() {
     // Perform DFS
     cout << "\n";
     graph.DFS("A001");
+    cout << "\nDFS finished!" << endl;
+
+    cout << "\nStarting device loading..." << endl;
+
+    DeviceLoader deviceLoader;
+
+    vector<Device> devices =
+        deviceLoader.loadDevices("data/devices.csv");
+
+    cout << "Devices loaded: " << devices.size() << endl;
+
+    cout << "Starting analyzer..." << endl;
+
+    Analyzer analyzer;
+
+    analyzer.findSharedDevices(devices, 2);
+
+    cout << "Analyzer finished." << endl;
 
     return 0;
 }

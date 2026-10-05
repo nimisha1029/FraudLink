@@ -1,4 +1,7 @@
-id,type
-D001,mobile
-D002,laptop
-D003,tablet
+id,type,account_id
+D001,mobile,A001
+D002,laptop,A002
+D003,tablet,A003
+D001,mobile,A002
+D001,mobile,A004
+D002,laptop,A005
