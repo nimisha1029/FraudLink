@@ -59,9 +59,9 @@ FraudLink uses synthetically generated CSV datasets.
 
 | Dataset | Description |
 |---|---|
-| accounts.csv | Account IDs, account names and balances |
-| transactions.csv | Transaction IDs, sender accounts, receiver accounts and transaction amounts |
-| devices.csv | Device IDs, device types and associated account IDs |
+| `accounts.csv` | Account IDs, account names and balances |
+| `transactions.csv` | Transaction IDs, sender accounts, receiver accounts and transaction amounts |
+| `devices.csv` | Device IDs, device types and associated account IDs |
 
 *Target dataset size:*
 
@@ -73,14 +73,14 @@ FraudLink uses synthetically generated CSV datasets.
 The dataset includes intentionally shared devices to test the shared-device analysis functionality.
 
 ## Project Structure
-
+```text
 FraudLink/ <br>
 │<br>
-├──   data/<br>
-│           ├── accounts.csv<br>
-│           ├── transactions.csv<br>
-│           └── devices.csv<br>
-│    <br>
+├──data/<br>
+│ ├── accounts.csv<br>
+│ ├── transactions.csv<br>
+│ └── devices.csv<br>
+│<br>
 ├── include/<br>
 │   ├── Account.h<br>
 │   ├── Transaction.h<br>
@@ -107,34 +107,35 @@ FraudLink/ <br>
 ├── main.cpp<br>
 ├── generate_data.cpp<br>
 └── README.md<br>
-
+```
 ## Build and Run
 
 ### 1. Generate the synthetic datasets
 
 Compile the data generator:
 
-bash
+```bash
 g++ -std=c++17 -Iinclude generate_data.cpp src/DataGenerator.cpp -o generate_data
+```
 
 
 Run:
 
-bash
+```bash
 ./generate_data
-
+```
 
 ### 2. Compile FraudLink
 
-bash
+```bash
 g++ -std=c++17 -Iinclude src/*.cpp main.cpp -o fraudlink
-
+```
 
 ### 3. Run the application
 
-bash
+```bash
 ./fraudlink
-
+```
 
 ## Application Menu
 
