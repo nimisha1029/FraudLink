@@ -77,9 +77,9 @@ The dataset includes intentionally shared devices to test the shared-device anal
 FraudLink/ <br>
 │<br>
 ├──   data/<br>
-│     ├── accounts.csv<br>
-│     ├── transactions.csv<br>
-│     └── devices.csv<br>
+│           ├── accounts.csv<br>
+│           ├── transactions.csv<br>
+│           └── devices.csv<br>
 │    <br>
 ├── include/<br>
 │   ├── Account.h<br>
