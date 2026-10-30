@@ -23,3 +23,6 @@ cmake-build-*/
 
 # Generated large datasets
 data/generated/
+
+# Data generator executable
+/generate_data
