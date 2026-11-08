@@ -26,7 +26,7 @@ vector<Transaction> TransactionLoader::loadTransactions(string filename) {
         getline(ss, t.senderId, ',');
         getline(ss, t.receiverId, ',');
         getline(ss, amountText, ',');
-        getline(ss, t.deviceId, ',');
+       // getline(ss, t.deviceId, ',');
 
         t.amount = stod(amountText);
         transactions.push_back(t);
