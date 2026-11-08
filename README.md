@@ -39,11 +39,6 @@ FraudLink uses synthetic data and rule-based analysis. It is an educational prot
 - Counts the number of accounts associated with each device.
 - Flags devices shared by more than a specified threshold of accounts for further investigation.
 
-### 5. Performance Analysis
-- Compares linear search and hash-based lookup.
-- Measures graph construction and traversal execution times.
-- Evaluates algorithm performance across different dataset sizes.
-
 ## Technology Stack
 
 - *Language:* C++17
@@ -115,10 +110,8 @@ FraudLink/ <br>
 Compile the data generator:
 
 ```bash
-g++ -std=c++17 -Iinclude generate_data.cpp src/DataGenerator.cpp -o generate_data
+g++ -std=c++17 -Iinclude \src/generate_Data.cpp \src/DataGenerator.cpp \-o generate_data
 ```
-
-
 Run:
 
 ```bash
@@ -128,7 +121,8 @@ Run:
 ### 2. Compile FraudLink
 
 ```bash
-g++ -std=c++17 -Iinclude src/*.cpp main.cpp -o fraudlink
+g++ -std=c++17 -Iinclude \src/main.cpp \src/DataLoader.cpp \src/TransactionLoader.cpp \src/DeviceLoader.cpp \
+src/AccountSearch.cpp \src/AccountIndex.cpp \src/Graph.cpp \src/Analyzer.cpp \-o fraudlink
 ```
 
 ### 3. Run the application
