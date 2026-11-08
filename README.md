@@ -110,7 +110,7 @@ FraudLink
 Compile the data generator:
 
 ```bash
-g++ -std=c++17 -Iinclude \src/generate_Data.cpp \src/DataGenerator.cpp \-o generate_data
+g++ -std=c++17 -Iinclude src/generate_Data.cpp src/DataGenerator.cpp -o generate_data
 ```
 Run:
 
@@ -121,8 +121,7 @@ Run:
 ### 2. Compile FraudLink
 
 ```bash
-g++ -std=c++17 -Iinclude \src/main.cpp \src/DataLoader.cpp \src/TransactionLoader.cpp \src/DeviceLoader.cpp \
-src/AccountSearch.cpp \src/AccountIndex.cpp \src/Graph.cpp \src/Analyzer.cpp \-o fraudlink
+g++ -std=c++17 -Iinclude src/DataLoader.cpp src/TransactionLoader.cpp src/DeviceLoader.cpp src/AccountSearch.cpp src/AccountIndex.cpp src/Graph.cpp src/Analyzer.cpp main.cpp -o fraudlink
 ```
 
 ### 3. Run the application
