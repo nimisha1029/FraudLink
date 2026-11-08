@@ -28,35 +28,20 @@ int main() {
     vector<Device> devices =
         deviceLoader.loadDevices("data/devices.csv");
 
-    // creating objects
-    // -----------------------------
-    // Create objects
-    // -----------------------------
-
+    // creating objects for linear search , hash indexing, graph representation and analyzer
     AccountSearch searcher;
     AccountIndex indexer;
     Graph graph;
     Analyzer analyzer;
 
-
-    // -----------------------------
-    // Build index and graph
-    // -----------------------------
-
     indexer.buildIndex(accounts);
-
     graph.buildGraph(accounts, transactions);
 
-
-    // -----------------------------
     // Main menu
-    // -----------------------------
-
     while (true) {
 
-        cout << "\n=============================\n";
-        cout << "          FRAUDLINK\n";
-        cout << "=============================\n";
+        cout << "\nWELCOME TO FRAUDLINK \n";
+        cout << "BE SAFE FROM FRAUDS \n";
 
         cout << "1. Search Account\n";
         cout << "2. Display Transaction Graph\n";
@@ -66,131 +51,77 @@ int main() {
         cout << "6. Exit\n";
 
         int choice;
-
         cout << "\nEnter your choice: ";
         cin >> choice;
-
-
-        // -----------------------------
+        
         // Option 1: Search Account
-        // -----------------------------
-
-        if (choice == 1) {
-
+            if (choice == 1) {
             string searchId;
-
             cout << "Enter account ID: ";
             cin >> searchId;
 
-            int linearResult =
-                searcher.linearSearch(accounts, searchId);
-
-            int hashResult =
-                indexer.findAccount(searchId);
+            int linearResult =searcher.linearSearch(accounts, searchId);
+            int hashResult =indexer.findAccount(searchId);
 
             if (linearResult != -1) {
-
                 cout << "Linear search found: "
                      << accounts[linearResult].name << endl;
             }
             else {
-
                 cout << "Linear search: Account not found"
                      << endl;
             }
-
             if (hashResult != -1) {
-
                 cout << "Hash search found: "
                      << accounts[hashResult].name << endl;
             }
             else {
-
                 cout << "Hash search: Account not found"
                      << endl;
             }
         }
 
-
-        // -----------------------------
         // Option 2: Display Graph
-        // -----------------------------
-
         else if (choice == 2) {
-
             cout << "\nTransaction Graph:\n";
-
             graph.displayGraph();
         }
-
-
-        // -----------------------------
+            
         // Option 3: BFS
-        // -----------------------------
-
         else if (choice == 3) {
-
             string startId;
-
             cout << "Enter starting account ID: ";
             cin >> startId;
-
             graph.BFS(startId);
         }
 
-
-        // -----------------------------
         // Option 4: DFS
-        // -----------------------------
-
         else if (choice == 4) {
-
             string startId;
-
             cout << "Enter starting account ID: ";
             cin >> startId;
-
             graph.DFS(startId);
         }
-
-
-        // -----------------------------
+            
         // Option 5: Shared Device
-        // -----------------------------
-
         else if (choice == 5) {
-
             int threshold;
-
             cout << "Enter shared-device threshold: ";
             cin >> threshold;
-
             analyzer.findSharedDevices(devices, threshold);
         }
 
-
-        // -----------------------------
         // Option 6: Exit
-        // -----------------------------
-
         else if (choice == 6) {
-
             cout << "Exiting FraudLink..." << endl;
-
             break;
         }
-
-
-        // -----------------------------
+            
         // Invalid choice
-        // -----------------------------
-
         else {
-
             cout << "Invalid choice. Please try again." << endl;
         }
     }
-
     return 0 ; 
 }
 
