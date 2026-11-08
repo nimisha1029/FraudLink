@@ -78,30 +78,30 @@ FraudLink
 │
 ├── include
 │   ├── Account.h
-│   ├── Transaction.h<br>
-│   ├── Device.h<br>
-│   ├── DataLoader.h<br>
-│   ├── TransactionLoader.h<br>
-│   ├── DeviceLoader.h<br>
-│   ├── AccountSearch.h<br>
-│   ├── AccountIndex.h<br>
-│   ├── Graph.h<br><br>
-│   ├── Analyzer.h<br><br>
-│   └── DataGenerator.h<br>
-│<br>
-├── src/<br>
-│   ├── DataLoader.cpp<br>
-│   ├── TransactionLoader.cpp<br>
-│   ├── DeviceLoader.cpp<br>
-│   ├── AccountSearch.cpp<br>
-│   ├── AccountIndex.cpp<br>
-│   ├── Graph.cpp<br>
-│   ├── Analyzer.cpp<br>
-│   └── DataGenerator.cpp<br>
-│<br>
-├── main.cpp<br>
-├── generate_data.cpp<br>
-└── README.md<br>
+│   ├── Transaction.h
+│   ├── Device.h
+│   ├── DataLoader.h
+│   ├── TransactionLoader.h
+│   ├── DeviceLoader.h
+│   ├── AccountSearch.h
+│   ├── AccountIndex.h
+│   ├── Graph.h<
+│   ├── Analyzer.h
+│   └── DataGenerator.h
+│
+├── src
+│   ├── DataLoader.cpp
+│   ├── TransactionLoader.cpp
+│   ├── DeviceLoader.cpp
+│   ├── AccountSearch.cpp
+│   ├── AccountIndex.cpp
+│   ├── Graph.cpp
+│   ├── Analyzer.cpp
+│   └── DataGenerator.cpp
+│
+├── main.cpp
+├── generate_data.cpp
+└── README.md
 ```
 ## Build and Run
 
