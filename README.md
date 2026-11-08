@@ -69,15 +69,15 @@ The dataset includes intentionally shared devices to test the shared-device anal
 
 ## Project Structure
 ```text
-FraudLink /<br>
-│<br>
-├──data/<br>
-│ ├── accounts.csv<br>
-│ ├── transactions.csv<br>
-│ └── devices.csv<br>
-│<br>
-├── include/<br>
-│   ├── Account.h<br>
+FraudLink 
+│
+├──data
+│ ├── accounts.csv
+│ ├── transactions.csv
+│ └── devices.csv
+│
+├── include
+│   ├── Account.h
 │   ├── Transaction.h<br>
 │   ├── Device.h<br>
 │   ├── DataLoader.h<br>
