@@ -69,7 +69,7 @@ The dataset includes intentionally shared devices to test the shared-device anal
 
 ## Project Structure
 ```text
-FraudLink/ <br>
+FraudLink /<br>
 │<br>
 ├──data/<br>
 │ ├── accounts.csv<br>
